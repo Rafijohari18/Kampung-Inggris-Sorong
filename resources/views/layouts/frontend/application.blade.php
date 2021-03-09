@@ -63,7 +63,7 @@
 </head>
 
 <body class="@yield('body-class')">
-    @if(Request::segment('5') == '5' || Request::segment('5') == '10')
+    @if(Request::segment('5') == '5' && Request::segment('6') !=  'news' && Request::segment('6') !=  'struktur-organization' || Request::segment('3') == 'post')
     <div id="main" class="single-page">
     @else
     <div id="main">

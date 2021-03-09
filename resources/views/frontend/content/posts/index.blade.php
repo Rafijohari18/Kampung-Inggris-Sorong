@@ -7,7 +7,7 @@
             <div class="row no-gutter">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="post-categories text-center">
-                        <a class="badge badge-blue" href="information-news.html">{{ $data['read']->category->fieldLang('name') }}</a>
+                        <a class="badge badge-blue" href="{{ $data['read']->section->routes($data['read']->section_id, $data['read']->section->slug).'?category_id='.$data['read']->category_id }}">{{ $data['read']->category->fieldLang('name') }}</a>
                     </div>
                     <h1 class="post-title text-center">{!! $data['read']->fieldLang('title') !!}</h1>
                     @if (!empty($data['read']->cover['file_path']))
@@ -66,7 +66,7 @@
                                 </figure>
                                 <div class="post-content">
                                     <div class="post-categories">
-                                        <a class="badge badge-blue" href="information-news.html">{{ $latest->category->fieldLang('name') }}</a>
+                                        <a class="badge badge-blue" href="{{ $latest->section->routes($latest->section_id, $latest->section->slug).'?category_id='.$latest->category_id }}">{{ $latest->category->fieldLang('name') }}</a>
                                     </div>
                                     <h5 class="post-title"><a class="hover-style" href="{{ $latest->section->routes($latest->section_id, $latest->section->slug) }}">{{ $latest->fieldLang('title') }}?</a></h5>
                                     <div class="post-meta">
@@ -79,7 +79,7 @@
                     @endforeach
                 </div>
                 <div class="caption-btn text-center">
-                    <a class="link-icon" href="information-news.html">More News<span><i class="fal fa-long-arrow-right"></i></span></a>
+                    <a class="link-icon" href="">More News<span><i class="fal fa-long-arrow-right"></i></span></a>
                 </div>
             </div>
         </section>
