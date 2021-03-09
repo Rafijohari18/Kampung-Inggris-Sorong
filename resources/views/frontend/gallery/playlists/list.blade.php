@@ -46,6 +46,7 @@
                     </div>
                 </di>
                 @endforeach   
+
                 @if ($data['playlist']->total() == 0)
                     <div class="text-center d-flex justify-content-center">
                         <h5 style="color: red;">!<em> <strong style="color: red;">@lang('common.menu_galeri_foto') Kosong</strong> </em>!</h5>
@@ -62,47 +63,6 @@
         </div>
     </section>
 
-
-<section class="content-wrap section-content">
-    <div class="container">
-        <div class="row list-blog">
-            @foreach ($data['playlist'] as $playlist)
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="blog-post blog-5">
-                    <figure class="post-image">
-                        <div class="box-img">
-                            <a href="{{ $playlist->routes($playlist->id) }}" title="{!! $playlist->fieldLang('name') !!}">
-                                <div class="thumb">
-                                    <img class="lazy" data-src="{{ $playlist->videoCover($playlist->id) }}" title="{!! $playlist->fieldLang('name') !!}" alt="{!! $playlist->fieldLang('name') !!}">
-                                </div>
-                            </a>
-                        </div>
-                    </figure>
-                    <div class="post-content">
-                        <ul class="post-categories">
-                            <li><span class="badge badge-dark">{{ $playlist->video->count() }} Video</span></li>
-                        </ul>
-                        <h5 class="post-title f-bold" ellipsis><a class="hover-effect-1" href="{{ $playlist->routes($playlist->id) }}" title="{!! $playlist->fieldLang('name') !!}">{!! $playlist->fieldLang('name') !!}</a></h5>
-                        <div class="post-meta txt-grey">
-                            <span><i class="far fa-clock txt-dark"></i>{{ $playlist->created_at->format('M d, Y') }}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-            @if ($data['playlist']->total() == 0)
-            <div class="text-center d-flex justify-content-center">
-                <h5 style="color: red;">!<em> <strong style="color: red;">@lang('common.menu_galeri_video') Kosong</strong> </em>!</h5>
-            </div>
-            @endif
-        </div>
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                {{ $data['playlist']->onEachSide(1)->links('vendor.pagination.custom') }}
-            </div>
-        </div>
-    </div>
-</section>
 @endsection
 
 @section('scripts')
