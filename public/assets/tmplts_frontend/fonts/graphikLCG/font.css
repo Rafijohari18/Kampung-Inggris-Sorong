@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "graphikLCG";
+  font-style: normal;
+  font-weight: 400;
+  src: url("GraphikLCG-Regular.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: "graphikLCG";
+    font-style: normal;
+    font-weight: 500;
+    src: url("GraphikLCG-Medium.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: "graphikLCG";
+    font-style: normal;
+    font-weight: 600;
+    src: url("GraphikLCG-Semibold.woff2") format("woff2")
+}
+
+@font-face {
+    font-family: "graphikLCG";
+    font-style: normal;
+    font-weight: 700;
+    src: url("GraphikLCG-Bold.woff2") format("woff2")
+}
