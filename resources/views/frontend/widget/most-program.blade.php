@@ -21,7 +21,7 @@
                             </figure>
                             <div class="product-info">
                                 <div class="d-flex align-items-center">
-                                    <a class="fs-12" href="program-english.html">{{ $program->category->fieldLang('name') }}</a>
+                                    <a class="fs-12" href="{{ $program->section->routes($program->section_id, $program->section->slug).'?category_id='.$program->category_id }}">{{ $program->category->fieldLang('name') }}</a>
                                     <div class="rating-icon ml-auto">
                                         <div class="rating-content">
                                             <div class="rating rated"></div>

@@ -54,7 +54,7 @@
                 <div class="col-lg-7 txt-wrapper">
                     <div class="product-info">
                         <div class="d-flex align-items-center">
-                            <a href="program-english.html" class="fs-12">{{ $data['read']->category->fieldLang('name') }}</a>
+                            <a href="{{ $data['read']->section->routes($data['read']->section_id, $data['read']->section->slug).'?category_id='.$data['read']->category_id }}" class="fs-12">{{ $data['read']->category->fieldLang('name') }}</a>
                             <div class="rating-icon ml-auto">
                                 <div class="rating-content">
                                     <div class="rating rated"></div>
@@ -97,7 +97,9 @@
                     <ul class="nav nav-tabs">
                         <li class="nav-item"><a class="nav-link btn btn-custom active" data-toggle="tab" href="#program-detail">Program Detail</a></li>
                         <li class="nav-item"><a class="nav-link btn btn-custom" data-toggle="tab" href="#program-desc">Description</a></li>
-                        <li class="nav-item"><a class="nav-link btn btn-custom" data-toggle="tab" href="#program-rec">Latest Post</a></li>
+                        
+                        <li class="nav-item"><a class="nav-link btn btn-custom" data-toggle="tab" href="#program-rec">Other {{ $data['read']->category->fieldLang('name') }}</a></li>
+                    
                     </ul>
                 </div>
             </div>
@@ -125,7 +127,7 @@
                                     </figure>
                                     <div class="product-info">
                                         <div class="d-flex align-items-center">
-                                            <a class="fs-12" href="program-english.html">{{ $latest->category->fieldLang('name') }}</a>
+                                            <a class="fs-12" href="{{ $data['read']->section->routes($data['read']->section_id, $data['read']->section->slug).'?category_id='.$data['read']->category_id }}">{{ $latest->category->fieldLang('name') }}</a>
                                             <div class="rating-icon ml-auto">
                                                 <div class="rating-content">
                                                     <div class="rating rated"></div>

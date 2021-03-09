@@ -18,7 +18,7 @@
                         </figure>
                         <div class="post-content">
                             <div class="post-categories">
-                                <a class="badge badge-blue" href="information-news.html">{{ $news->category->fieldLang('name') }}</a>
+                                <a class="badge badge-blue" href="{{ $news->section->routes($news->section_id, $news->section->slug).'?category_id='.$news->category_id }}">{{ $news->category->fieldLang('name') }}</a>
                             </div>
                             <h5 class="post-title"><a class="hover-style" href="{{ $news->section->routes($news->section_id, $news->section->slug) }}">{!! $news->fieldLang('title') !!}</a></h5>
                             <div class="post-meta">
