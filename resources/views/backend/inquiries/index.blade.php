@@ -93,12 +93,14 @@
                 @foreach ($data['inquiries'] as $item)
                 <tr>
                     <td>{{ $data['no']++ }}</td>
-                    <td><strong>{!! Str::limit($item->fieldLang('name'), 50) !!}</strong> <a href="{{ $item->routes($item->slug) }}" target="_blank"><i class="las la-external-link-alt" style="font-size: 1.5em"></i></a></td>
+                    <td>
+                    <strong>{!! Str::limit($item->fieldLang('name'), 50) !!}</strong> <a href="{{ $item->routes($item->slug) }}" target="_blank"><i class="las la-external-link-alt" style="font-size: 1.5em"></i></a></td>
                     <td>
                         Total : <strong class="badge badge-success">{{ $item->message->count() }}</strong> <br>
                         Haven't read : <strong class="badge badge-danger">{{ $item->message->where('status', 0)->count() }}</strong>
                     </td>
                     <td class="text-center"><span class="badge badge-info">{{ $item->viewer }}</span></td>
+                    
                     <td class="text-center">
                         @can ('inquiry_edit')
                         <a href="javascript:void(0);" onclick="$(this).find('form').submit();" class="badge badge-{{ config('custom.label.publish.'.$item->publish)['color'] }}"

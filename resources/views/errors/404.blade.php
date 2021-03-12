@@ -2,17 +2,18 @@
 
 @section('title', '| 404 Not Found')
 
+
 @section('content')
 <section class="page-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
                 <ul class="breadcrumb">
-                    <li><a class="link" href="{{ route('home') }}" title="@lang('common.menu_beranda')">@lang('common.menu_beranda')</a></li>
-                    <li>404 Not Found</li>
+                    <li><a class="link" href="{{ route('home') }}" title="@lang('common.menu_beranda')" style="color:black;">@lang('common.menu_beranda')</a></li>
+                    <li style="color:black;">404 Not Found</li>
                 </ul>
                 <div class="main-title text-center">
-                    <h1 class="title">@lang('common.error_404_title')</h1>
+                    <h1 class="title" style="color:black;">@lang('common.error_404_title')</h1>
                 </div>
             </div>
         </div>
