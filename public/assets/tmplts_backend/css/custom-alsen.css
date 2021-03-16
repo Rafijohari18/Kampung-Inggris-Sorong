@@ -681,7 +681,7 @@
 }
 
 .alsen .sidenav {
-  background-color: #4f90f1 !important;
+  background-color: #2E323A!important
 }
 .alsen .sidenav .app-brand.demo {
   padding: 1.75rem 5px !important;
@@ -695,7 +695,7 @@
   border-radius: 0;
 }
 .alsen .sidenav .app-brand img {
-  width: 100%;
+  width: 70%;
   height: auto;
 }
 .alsen .sidenav .app-brand .layout-sidenav-toggle {
